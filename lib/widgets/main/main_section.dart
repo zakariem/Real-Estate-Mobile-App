@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:real_estate_mobile_app/pages/home.dart';
 import 'package:real_estate_mobile_app/widgets/main/main_banner.dart';
+import 'package:real_estate_mobile_app/widgets/menu/icons_info.dart';
 
 class MainSection extends StatelessWidget {
   const MainSection({super.key});
@@ -13,6 +14,7 @@ class MainSection extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             MainBanner(),
+            IconsInfo(),
           ],
         ),
       ),
