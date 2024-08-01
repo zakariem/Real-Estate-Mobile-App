@@ -10,7 +10,7 @@ class Logo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 1.23,
+      aspectRatio: 1.2,
       child: Container(
         color: kSecondaryColor,
         child: Column(
@@ -21,12 +21,10 @@ class Logo extends StatelessWidget {
               Assets.imagesLogo,
               width: 100,
             ),
-            const Spacer(),
             Text(
               'Real Estate',
               style: Theme.of(context).textTheme.bodyLarge,
             ),
-            const Spacer(),
             const Text(
               'Modern home with \n greate interior design.',
               textAlign: TextAlign.center,
@@ -34,7 +32,8 @@ class Logo extends StatelessWidget {
                 fontWeight: FontWeight.w200,
                 height: 1.5,
               ),
-            )
+            ),
+            const Spacer(),
           ],
         ),
       ),

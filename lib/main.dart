@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:real_estate_mobile_app/constants/colors.dart';
-import 'package:real_estate_mobile_app/pages/home.dart';
+import 'package:real_estate_mobile_app/widgets/main/main_section.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
               bodyMedium: const TextStyle(color: kBodyTextColor),
             ),
       ),
-      home: const HomeScreen(),
+      home: const MainSection(),
     );
   }
 }
