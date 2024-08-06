@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:real_estate_mobile_app/constants/assets.dart';
 import 'package:real_estate_mobile_app/constants/colors.dart';
+import 'package:real_estate_mobile_app/responsive.dart';
 
 class MainBanner extends StatelessWidget {
   const MainBanner({super.key});
@@ -8,7 +9,7 @@ class MainBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 1.7,
+      aspectRatio: Responsive.isMobile(context) ? 1 : 1.7,
       child: Stack(
         fit: StackFit.expand,
         children: [
@@ -27,11 +28,17 @@ class MainBanner extends StatelessWidget {
               children: [
                 Text(
                   'Build a greate future \nfor all of us!',
-                  style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 48.0,
-                        color: Colors.white,
-                      ),
+                  style: Responsive.isDesktop(context)
+                      ? Theme.of(context).textTheme.headlineLarge!.copyWith(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 48.0,
+                            color: Colors.white,
+                          )
+                      : Theme.of(context).textTheme.headlineLarge!.copyWith(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 24.0,
+                            color: Colors.white,
+                          ),
                 ),
                 ElevatedButton(
                   style: TextButton.styleFrom(
